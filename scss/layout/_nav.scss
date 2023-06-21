@@ -1,0 +1,41 @@
+.navbar {
+  width: 100%;
+  top: 0;
+  position: sticky;
+  height: 4.8em;
+  padding: 0 1em 0 1em;
+  background-color: #fff;
+  border-bottom: 2px solid #ddd;
+  z-index: 10;
+  ul {
+    display: flex;
+    gap: 1em;
+    margin: 0;
+    align-items: center;
+    a {
+      text-decoration: none;
+      font-size: 1.1em;
+      color: black;
+    }
+    svg {
+      scale: 1.5;
+      fill: black;
+      margin-left: 0.5em;
+    }
+  }
+}
+
+#boton-carrito {
+  position: absolute;
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
+  line-height: 129%;
+  width: 1.4em;
+  height: 1.4em;
+  border-radius: 50%;
+  background-color: #ffb74c;
+  border: 2px solid #000;
+  margin-top: -1.75em;
+  margin-left: 1.2em;
+}

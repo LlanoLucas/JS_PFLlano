@@ -1,0 +1,19 @@
+@use "../utils" as u;
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+::-webkit-scrollbar {
+  width: 0.3em;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff4df;
+  border-radius: 0.25em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffb74c;
+  border-radius: 0.25em;
+}
