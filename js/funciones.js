@@ -98,6 +98,16 @@ function carritoLength() {
   return carrito.length;
 }
 
+function vaciarCarrito() {
+  localStorage.removeItem("carrito");
+  let boton = document.getElementById("boton-carrito");
+  boton.remove();
+  definirRender();
+  renderCarrito();
+  botonRender();
+  renderSubtotal();
+}
+
 function renderCarrito() {
   const productos = cargarCarrito();
   let contenido = "";

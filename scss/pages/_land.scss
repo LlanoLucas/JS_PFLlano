@@ -78,6 +78,7 @@
       border-radius: 0.25em;
       li {
         cursor: pointer;
+        padding: 0 0.5em;
       }
     }
   }
@@ -113,11 +114,11 @@
       height: 2em;
       width: 5em;
       border-radius: 0.25em;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
       &__menos {
         border-right: 1px solid #aaa;
-        padding-right: 0.35em;
+        padding: 0 0.45em;
         cursor: pointer;
         user-select: none;
         transition: all 0.2s ease-in-out;
@@ -127,7 +128,7 @@
       }
       &__mas {
         border-left: 1px solid #aaa;
-        padding-left: 0.35em;
+        padding: 0 0.45em;
         cursor: pointer;
         user-select: none;
         transition: all 0.2s ease-in-out;
@@ -274,6 +275,15 @@
   }
 }
 
+.botones-carrito {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    width: 91%;
+  }
+}
+
 #pbtn {
   background-color: #ffb74c;
   width: 100%;
@@ -285,6 +295,34 @@
   transition: all 300ms ease-in-out;
   &:active {
     scale: 0.98;
+  }
+}
+
+#vaciar {
+  width: 8%;
+  background-color: #eee;
+  border: 2px solid #000;
+  border-radius: 0.2em;
+  height: 2.15em;
+  transition: all 300ms ease-in-out;
+  &[data-title]:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    background-color: white;
+    border: 2px solid #000;
+    padding: 0 0.25em;
+    border-radius: 0.2em;
+    width: max-content;
+    margin-top: 0.85em;
+    transform: translateX(-83%);
+  }
+  &:active {
+    scale: 0.98;
+  }
+  svg {
+    scale: 1.5;
+    display: block;
+    margin: auto;
   }
 }
 
