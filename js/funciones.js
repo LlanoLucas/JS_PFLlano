@@ -243,7 +243,7 @@ confirmarCompra.onclick = () => {
     Swal.fire({
       icon: "warning",
       title: "El carrito está vacio",
-      text: "Agrega productos al carrito para realizar tu compra",
+      text: "Añade productos al carrito para comprar",
       confirmButtonColor: "#ffb74c",
     });
   }
