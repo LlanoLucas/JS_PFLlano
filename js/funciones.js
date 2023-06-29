@@ -220,6 +220,35 @@ function renderSelector() {
   });
 }
 
+confirmarCompra.onclick = () => {
+  if (carritoLength() > 0) {
+    Swal.fire({
+      icon: "info",
+      title: "Procesando...",
+      text: "Tu pago está siendo procesado",
+      footer: "Aguarda un momento",
+      showConfirmButton: false,
+    });
+    setTimeout(() => {
+      Swal.fire({
+        icon: "success",
+        title: "Pago Exitoso",
+        text: "¡Tu pago ha sido confirmado con éxito!",
+        footer: "¡Gracias por tu compra!",
+        confirmButtonColor: "#ffb74c",
+      });
+      vaciarCarrito();
+    }, 1500);
+  } else {
+    Swal.fire({
+      icon: "warning",
+      title: "El carrito está vacio",
+      text: "Agrega productos al carrito para realizar tu compra",
+      confirmButtonColor: "#ffb74c",
+    });
+  }
+};
+
 renderSelector();
 renderCarrito();
 botonRender();

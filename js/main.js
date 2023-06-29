@@ -5,3 +5,6 @@ const filtroTodos = document.getElementById("todos");
 const filtroVerdura = document.getElementById("verdura");
 const filtroSinSal = document.getElementById("sin_sal");
 const filtroDulces = document.getElementById("dulces");
+
+const confirmarCompra = document.getElementById("confirmar-compra");
+const comentarios = document.getElementById("comentarios");

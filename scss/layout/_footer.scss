@@ -1,0 +1,26 @@
+footer {
+  border-top: 1px solid black;
+  width: 95%;
+  margin: 5em auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.75em 2em;
+  * {
+    margin: 0;
+  }
+  div {
+    display: flex;
+    img {
+      height: 2em;
+    }
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    svg {
+      scale: 1.5;
+    }
+  }
+}
