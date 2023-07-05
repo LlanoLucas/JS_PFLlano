@@ -1,3 +1,5 @@
+@use "../utils/" as u;
+
 .index__header {
   margin-top: 7.1em;
   display: flex;
@@ -13,19 +15,25 @@
 }
 
 .productos {
-  background-color: #ffb74c;
+  background-color: u.$c-principal;
   padding: 2em 0 2em 0;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
   &__container {
-    padding: 2em 4em 2em 4em;
+    padding: 2em 3em 2em 3em;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15%;
+    @include u.breakpoint("lg") {
+      padding: 1em 2em 1em 2em;
+    }
     img {
       width: 30%;
       border-radius: 0.5em;
+      @include u.breakpoint("lg") {
+        width: 45%;
+      }
     }
     div {
       display: flex;
@@ -88,6 +96,7 @@
       display: flex;
       gap: 1em;
       align-items: center;
+      width: 80%;
       img {
         width: 4em;
         height: 4em;
@@ -145,7 +154,7 @@
       flex-direction: column;
       gap: 1em;
       padding: 0 1em 0 1em;
-      height: 80vh;
+      height: 90vh;
       overflow-y: auto;
       li {
         display: flex;
@@ -204,16 +213,20 @@
         width: 100%;
         margin-top: 0.5em;
         font-weight: 500;
-        gap: 1em;
+        gap: 0.9em;
         justify-content: end;
         padding: 0 0.5em;
+        @include u.breakpoint("lg") {
+          margin-top: 1em;
+          margin-bottom: 0.5em;
+        }
       }
       &__total {
         display: flex;
         width: 100%;
         margin-top: 0.1em;
         font-weight: 600;
-        gap: 1.2em;
+        gap: 1em;
         justify-content: end;
         padding: 0 0.5em;
       }
@@ -223,6 +236,9 @@
         padding: 0 0.5em;
         align-items: center;
         justify-content: space-between;
+        @include u.breakpoint("lg") {
+          margin-bottom: 0.5em;
+        }
         input {
           border: none;
           border: 2px solid #aaa;
@@ -230,6 +246,9 @@
           padding: 0.25em 0.5em;
           border-radius: 0.25em;
           transition: all 300ms ease-in-out;
+          @include u.breakpoint("lg") {
+            width: 5em;
+          }
           &:focus {
             border: 2px solid #ffb74c;
             outline: none;
@@ -241,6 +260,9 @@
           padding: 0.25em 0.5em;
           border-radius: 0.25em;
           transition: all 300ms ease-in-out;
+          @include u.breakpoint("lg") {
+            padding: 0.25em 0.3em;
+          }
           &:active {
             background-color: #ffb74c;
             border: 2px solid black;
@@ -251,7 +273,7 @@
           display: flex;
           gap: 0.25em;
           &:nth-child(2) {
-            gap: 1.7em;
+            gap: 1em;
             font-weight: 500;
           }
         }
@@ -281,6 +303,9 @@
   justify-content: space-between;
   a {
     width: 91%;
+    @include u.breakpoint("lg") {
+      width: 88%;
+    }
   }
 }
 
@@ -301,7 +326,7 @@
 #vaciar {
   width: 8%;
   background-color: #eee;
-  border: 2px solid #000;
+  border: 2px solid black;
   border-radius: 0.2em;
   height: 2.15em;
   transition: all 300ms ease-in-out;
@@ -309,7 +334,7 @@
     content: attr(data-title);
     position: absolute;
     background-color: white;
-    border: 2px solid #000;
+    border: 2px solid black;
     padding: 0 0.25em;
     border-radius: 0.2em;
     width: max-content;
@@ -324,6 +349,9 @@
     display: block;
     margin: auto;
   }
+  @include u.breakpoint("lg") {
+    width: 11%;
+  }
 }
 
 .pago {
@@ -335,6 +363,9 @@
     padding: 0.25em 0.5em;
     border: 2px solid black;
     background-color: #ffb74c;
+    @include u.breakpoint("lg") {
+      margin-bottom: 0.5em;
+    }
   }
   h3 {
     align-self: flex-end;
@@ -365,6 +396,11 @@
     display: flex;
     flex-direction: column;
     gap: 1em;
+    @include u.breakpoint("lg") {
+      width: 60%;
+      margin-top: 0.5em;
+      gap: 0.25em;
+    }
     &:last-child {
       border: none;
       padding: 0;
@@ -387,6 +423,9 @@
           outline: none;
           border: 2px solid #ffb74c;
         }
+        @include u.breakpoint("lg") {
+          width: 97%;
+        }
       }
       button {
         background-color: #ffb74c;
@@ -398,6 +437,9 @@
         transition: all 300ms ease-in-out;
         &:active {
           scale: 0.98;
+        }
+        @include u.breakpoint("lg") {
+          padding: 0.5em 0.75em;
         }
       }
     }
