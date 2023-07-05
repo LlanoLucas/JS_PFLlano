@@ -44,7 +44,7 @@
     "imagen": "imagenes/talita.webp",
     "precio": 600,
     "cantidad": 0,
-    "descripcion": "Intenso sabor a queso, con queso rayado encima",
+    "descripcion": "Con queso rayado encima",
     "precioAcumulado": 600
   },
   {
@@ -53,7 +53,7 @@
     "imagen": "imagenes/talita.webp",
     "precio": 600,
     "cantidad": 0,
-    "descripcion": "Intenso sabor a cebolla, con pedazos de cebolla",
+    "descripcion": "Con cebolla dentro",
     "precioAcumulado": 600
   },
   {

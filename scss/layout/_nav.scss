@@ -8,6 +8,9 @@
   background-color: #fff;
   border-bottom: 2px solid #ddd;
   z-index: 10;
+  .navbar-brand {
+    font-weight: 600;
+  }
   ul {
     display: flex;
     gap: 1em;
