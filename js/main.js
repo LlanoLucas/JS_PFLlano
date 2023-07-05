@@ -8,3 +8,14 @@ const filtroDulces = document.getElementById("dulces");
 
 const confirmarCompra = document.getElementById("confirmar-compra");
 const comentarios = document.getElementById("comentarios");
+
+let carritoLink = document.getElementsByClassName("nav-link");
+let btnClose = document.getElementById("btn-close");
+
+for (let i = 0; i < carritoLink.length; i++) {
+  carritoLength = carritoLink[i].onclick = () => {
+    setTimeout(() => {
+      btnClose.click();
+    }, 500);
+  };
+}

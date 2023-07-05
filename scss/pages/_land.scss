@@ -6,7 +6,8 @@
   justify-content: center;
   align-items: center;
   @include u.breakpoint("md") {
-    margin-top: 5em;
+    height: 93vh;
+    margin-top: 0;
     img {
       width: 60%;
     }
@@ -29,6 +30,9 @@
   padding: 2em 0 2em 0;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
+  @include u.breakpoint("sm") {
+    margin-top: 0;
+  }
   &__container {
     padding: 2em 3em 2em 3em;
     display: flex;
@@ -84,6 +88,9 @@
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     padding: 0.25em 0;
+    @include u.breakpoint("md") {
+      margin-bottom: 1.5em;
+    }
   }
   &__container {
     display: flex;
@@ -182,10 +189,14 @@
       flex-direction: column;
       gap: 1em;
       padding: 0 1em 0 1em;
-      height: 90vh;
+      height: 81vh;
       overflow-y: auto;
+      @include u.breakpoint("lg") {
+        height: 90vh;
+      }
       @include u.breakpoint("md") {
         padding: 0 0.75em 0 0.75em;
+        height: 50vh;
       }
       li {
         display: flex;
