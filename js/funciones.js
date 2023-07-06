@@ -166,7 +166,7 @@ async function renderSelector() {
   try {
     cargarProducto().forEach((element) => {
       if (element.tipo == "dulces") {
-        selectorProductos.innerHTML += `<li class="nuevo">
+        return (selectorProductos.innerHTML += `<li class="nuevo">
           <div class="carrito__productos__descripcion">
             <img src=${element.imagen} alt="talita" />
             <div>
@@ -194,9 +194,9 @@ async function renderSelector() {
              onclick="agregarAlCarrito(${element.id})">+</span
             >
           </div>
-        </li>`;
+        </li>`);
       } else {
-        selectorProductos.innerHTML += `<li>
+        return (selectorProductos.innerHTML += `<li>
             <div class="carrito__productos__descripcion">
               <img src=${element.imagen} alt="talita" />
               <div>
@@ -221,7 +221,7 @@ async function renderSelector() {
               onclick="agregarAlCarrito(${element.id})">+</span
               >
             </div>
-          </li>`;
+          </li>`);
       }
     });
   } catch (error) {}
