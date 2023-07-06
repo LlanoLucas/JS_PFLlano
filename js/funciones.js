@@ -1,3 +1,14 @@
+fetch("js/talitas.json")
+  .then((respuesta) => respuesta.json())
+  .then((datos) => {
+    localStorage.setItem("talitas", JSON.stringify(datos));
+    renderSelector();
+  })
+  .catch(
+    (err) =>
+      (selectorProductos.innerHTML = `<ul class="m-auto mt-1"><li>Los productos no se encontraron...<li><li class="m-auto mt-1">${err}<li><ul>`)
+  );
+
 function cargarProducto() {
   return JSON.parse(localStorage.getItem("talitas"));
 }
@@ -161,12 +172,11 @@ function renderSubtotal() {
   document.getElementById("total").textContent = `$${totalPrecio}`;
 }
 
-async function renderSelector() {
+function renderSelector() {
   selectorProductos.innerHTML = "";
-  try {
-    cargarProducto().forEach((element) => {
-      if (element.tipo == "dulces") {
-        return (selectorProductos.innerHTML += `<li class="nuevo">
+  cargarProducto().forEach((element) => {
+    if (element.tipo == "dulces") {
+      selectorProductos.innerHTML += `<li class="nuevo">
           <div class="carrito__productos__descripcion">
             <img src=${element.imagen} alt="talita" />
             <div>
@@ -194,9 +204,9 @@ async function renderSelector() {
              onclick="agregarAlCarrito(${element.id})">+</span
             >
           </div>
-        </li>`);
-      } else {
-        return (selectorProductos.innerHTML += `<li>
+        </li>`;
+    } else {
+      selectorProductos.innerHTML += `<li>
             <div class="carrito__productos__descripcion">
               <img src=${element.imagen} alt="talita" />
               <div>
@@ -221,10 +231,9 @@ async function renderSelector() {
               onclick="agregarAlCarrito(${element.id})">+</span
               >
             </div>
-          </li>`);
-      }
-    });
-  } catch (error) {}
+          </li>`;
+    }
+  });
 }
 
 confirmarCompra.onclick = () => {
@@ -256,6 +265,5 @@ confirmarCompra.onclick = () => {
   }
 };
 
-renderSelector();
 renderCarrito();
 botonRender();
